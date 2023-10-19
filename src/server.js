@@ -13,7 +13,7 @@ var app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://yujing.netlify.app/'
+    origin: '*'
 }));
 
 var clinicalRouter = express.Router();

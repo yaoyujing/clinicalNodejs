@@ -29,7 +29,7 @@ exports.update = (req,res)=>{
 }
 
 exports.delete = (req,res)=>{
-    dao.delete({_id:req.body},(err,result)=>{
+    dao.delete({_id:req.body._id},(err,result)=>{
         res.send(result)
     })
 }

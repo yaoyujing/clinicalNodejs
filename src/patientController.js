@@ -29,7 +29,8 @@ exports.update = (req,res)=>{
 }
 
 exports.delete = (req,res)=>{
-    dao.delete({_id:req.body._id},(err,result)=>{
-        res.send(result)
+    const patientId = req.params.patientId;
+    dao.delete({_id:patientId}).then(result=>{
+        res.send("success")
     })
 }
